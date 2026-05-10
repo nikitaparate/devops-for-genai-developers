@@ -23,11 +23,11 @@ So how does your app stay isolated from everyone else?
 
 That's what a Virtual Private Network does.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | VPC (Virtual Private Cloud) |
-| GCP | VPC (Virtual Private Cloud) |
-| Azure | VNet (Virtual Network) |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | VPC (Virtual Private Cloud) | [AWS VPC](https://aws.amazon.com/vpc/) |
+| GCP | VPC (Virtual Private Cloud) | [GCP VPC](https://cloud.google.com/vpc) |
+| Azure | VNet (Virtual Network) | [Azure VNet](https://azure.microsoft.com/en-us/products/virtual-network) |
 
 Think of the cloud as a massive apartment building. Your VPC / VNet is your private apartment. You decide who gets in, which rooms connect to each other, and what goes outside.
 
@@ -56,11 +56,11 @@ Same rule applies whether you are on AWS, GCP, or Azure.
 
 Okay this one is important. Especially if you are calling managed LLM services — AWS Bedrock, GCP Vertex AI, or Azure OpenAI — from your app.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | VPC Endpoint |
-| GCP | Private Service Connect |
-| Azure | Private Endpoint |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | VPC Endpoint | [AWS VPC Endpoint](https://aws.amazon.com/privatelink/) |
+| GCP | Private Service Connect | [Private Service Connect](https://cloud.google.com/vpc/docs/private-service-connect) |
+| Azure | Private Endpoint | [Azure Private Endpoint](https://azure.microsoft.com/en-us/products/private-link) |
 
 Here is what happens without it:
 
@@ -98,11 +98,12 @@ Most developers think CDN is only for serving images, CSS, JS files. I thought t
 
 But for Gen AI apps, it does a lot more.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | CloudFront |
-| GCP | Cloud CDN |
-| Azure | Azure CDN / Azure Front Door |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | CloudFront | [CloudFront](https://aws.amazon.com/cloudfront/) |
+| GCP | Cloud CDN | [Cloud CDN](https://cloud.google.com/cdn) |
+| Azure | Azure CDN | [Azure CDN](https://azure.microsoft.com/en-us/products/cdn) |
+| Azure | Azure Front Door | [Azure Front Door](https://azure.microsoft.com/en-us/products/frontdoor) |
 
 A CDN has edge locations across the world. When a user in Mumbai hits your app, the CDN serves them from the nearest edge location — not from your server sitting in some data center thousands of miles away.
 
@@ -167,11 +168,11 @@ Not every Gen AI app lives fully in the cloud. Many enterprise apps need to conn
 
 Two options to connect them securely:
 
-| | Dedicated Private Line | VPN |
-|---|---|---|
-| AWS | Direct Connect | Site-to-Site VPN |
-| GCP | Cloud Interconnect | Cloud VPN |
-| Azure | ExpressRoute | Azure VPN Gateway |
+| | Dedicated Private Line | Docs | VPN | Docs |
+|---|---|---|---|---|
+| AWS | Direct Connect | [AWS Direct Connect](https://aws.amazon.com/directconnect/) | Site-to-Site VPN | [AWS VPN](https://aws.amazon.com/vpn/) |
+| GCP | Cloud Interconnect | [Cloud Interconnect](https://cloud.google.com/network-connectivity/docs/interconnect) | Cloud VPN | [Cloud VPN](https://cloud.google.com/network-connectivity/docs/vpn) |
+| Azure | ExpressRoute | [ExpressRoute](https://azure.microsoft.com/en-us/products/expressroute) | Azure VPN Gateway | [Azure VPN](https://azure.microsoft.com/en-us/products/vpn-gateway) |
 
 **VPN:**
 Encrypted tunnel over public internet. Quick to set up — hours. Lower cost. Latency depends on your internet quality.
