@@ -37,11 +37,11 @@ You need all three. Especially for Gen AI.
 
 Every cloud gives you a built-in monitoring service. Free, automatic, no setup.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | CloudWatch |
-| GCP | Cloud Monitoring |
-| Azure | Azure Monitor |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | CloudWatch | [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) |
+| GCP | Cloud Monitoring | [Cloud Monitoring](https://cloud.google.com/monitoring) |
+| Azure | Azure Monitor | [Azure Monitor](https://azure.microsoft.com/en-us/products/monitor) |
 
 **What they track automatically:**
 
@@ -96,11 +96,11 @@ User Request — total: 12s
 
 The LLM call took 10.2 seconds. Now you know. Maybe your prompt is too large. Maybe you need to switch models. Maybe you need streaming.
 
-| Cloud | Native Tracing |
-|---|---|
-| AWS | X-Ray |
-| GCP | Cloud Trace |
-| Azure | Application Insights |
+| Cloud | Native Tracing | Docs |
+|---|---|---|
+| AWS | X-Ray | [AWS X-Ray](https://aws.amazon.com/xray/) |
+| GCP | Cloud Trace | [Cloud Trace](https://cloud.google.com/trace) |
+| Azure | Application Insights | [Application Insights](https://azure.microsoft.com/en-us/products/monitor) |
 
 **Limitation of native tracing:**
 
