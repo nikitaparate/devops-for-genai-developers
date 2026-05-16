@@ -27,12 +27,12 @@ After CI passes, it automatically deploys your new version to the environment. N
 
 Together — you push code to Git, everything else happens automatically. Your app is live in minutes.
 
-| Cloud | Native CI/CD |
-|---|---|
-| AWS | CodePipeline + CodeBuild |
-| GCP | Cloud Build |
-| Azure | Azure DevOps |
-| All clouds | GitHub Actions (most popular, works everywhere) |
+| Cloud | Native CI/CD | Docs |
+|---|---|---|
+| AWS | CodePipeline + CodeBuild | [CodePipeline](https://aws.amazon.com/codepipeline/) · [CodeBuild](https://aws.amazon.com/codebuild/) |
+| GCP | Cloud Build | [Cloud Build](https://cloud.google.com/build) |
+| Azure | Azure DevOps | [Azure DevOps](https://azure.microsoft.com/en-us/products/devops) |
+| All clouds | GitHub Actions | [GitHub Actions](https://github.com/features/actions) |
 
 Honest opinion — most teams use **GitHub Actions** regardless of which cloud they are on. It integrates with AWS, GCP, and Azure equally well. Learn one, use everywhere.
 
@@ -273,11 +273,11 @@ ArgoCD manages what runs inside Kubernetes. But who created the Kubernetes clust
 
 That's Terraform.
 
-| Cloud | Native IaC | Terraform |
-|---|---|---|
-| AWS | CloudFormation | ✅ Works |
-| GCP | Deployment Manager | ✅ Works |
-| Azure | ARM Templates / Bicep | ✅ Works |
+| Cloud | Native IaC | Docs | Terraform |
+|---|---|---|---|
+| AWS | CloudFormation | [CloudFormation](https://aws.amazon.com/cloudformation/) | [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) |
+| GCP | Deployment Manager | [Deployment Manager](https://cloud.google.com/deployment-manager) | [GCP Provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) |
+| Azure | ARM Templates / Bicep | [ARM Templates](https://azure.microsoft.com/en-us/products/arm) · [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/) | [Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs) |
 
 Terraform is cloud agnostic. One tool, all three clouds. That's why most teams pick Terraform over the native alternatives.
 
