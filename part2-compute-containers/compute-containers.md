@@ -19,11 +19,11 @@ This part covers the compute layer for Gen AI apps. Virtual machines, containers
 
 A virtual machine is simply a computer running inside the cloud. You get CPU, RAM, storage — just like your laptop. But in the cloud.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | EC2 (Elastic Compute Cloud) |
-| GCP | Compute Engine |
-| Azure | Azure Virtual Machine |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | EC2 (Elastic Compute Cloud) | [AWS EC2](https://aws.amazon.com/ec2/) |
+| GCP | Compute Engine | [Compute Engine](https://cloud.google.com/compute) |
+| Azure | Azure Virtual Machine | [Azure VM](https://azure.microsoft.com/en-us/products/virtual-machines) |
 
 Most Gen AI developers start here. It's familiar. You SSH in, install Python, run your agent. Done.
 
@@ -37,11 +37,11 @@ For simple use cases or one-off tasks — VMs are fine. For production Gen AI ap
 
 **One thing VMs are still great for in Gen AI:** GPU workloads. If you are running your own model inference — you need a GPU VM.
 
-| Cloud | GPU VM Options |
-|---|---|
-| AWS | EC2 P4, G5 instances |
-| GCP | A100, H100 via Compute Engine |
-| Azure | NC, ND series VMs |
+| Cloud | GPU VM Options | Docs |
+|---|---|---|
+| AWS | EC2 P4, G5 instances | [AWS GPU Instances](https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing) |
+| GCP | A100, H100 via Compute Engine | [GCP GPU VMs](https://cloud.google.com/compute/docs/gpus) |
+| Azure | NC, ND series VMs | [Azure GPU VMs](https://azure.microsoft.com/en-us/products/virtual-machines/nc-series) |
 
 ---
 
@@ -49,11 +49,11 @@ For simple use cases or one-off tasks — VMs are fine. For production Gen AI ap
 
 Your VM needs somewhere to store data. That's block storage — think of it as a hard drive you attach to your VM.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | EBS (Elastic Block Store) |
-| GCP | Persistent Disk |
-| Azure | Azure Managed Disk |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | EBS (Elastic Block Store) | [AWS EBS](https://aws.amazon.com/ebs/) |
+| GCP | Persistent Disk | [Persistent Disk](https://cloud.google.com/persistent-disk) |
+| Azure | Azure Managed Disk | [Azure Managed Disk](https://azure.microsoft.com/en-us/products/managed-disks) |
 
 Key things to know:
 - **Persistent** — data survives even if VM restarts
@@ -116,11 +116,11 @@ Use **python:3.11-slim** or **python:3.11-alpine** as your runtime base. Not the
 
 Once you build a Docker image, you need somewhere to store it so your cloud can pull it.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | ECR (Elastic Container Registry) |
-| GCP | Artifact Registry |
-| Azure | Azure Container Registry (ACR) |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | ECR (Elastic Container Registry) | [AWS ECR](https://aws.amazon.com/ecr/) |
+| GCP | Artifact Registry | [Artifact Registry](https://cloud.google.com/artifact-registry) |
+| Azure | Azure Container Registry (ACR) | [Azure ACR](https://azure.microsoft.com/en-us/products/container-registry) |
 
 Think of it like GitHub — but for Docker images instead of code.
 
@@ -134,11 +134,11 @@ One tip — **scan your images for vulnerabilities** before pushing to productio
 
 Not every Gen AI app needs Kubernetes. If your app is simple — one or two services — serverless containers are faster to set up and cheaper to run.
 
-| Cloud | Service Name |
-|---|---|
-| AWS | ECS Fargate |
-| GCP | Cloud Run |
-| Azure | Azure Container Apps |
+| Cloud | Service | Docs |
+|---|---|---|
+| AWS | ECS Fargate | [AWS Fargate](https://aws.amazon.com/fargate/) |
+| GCP | Cloud Run | [Cloud Run](https://cloud.google.com/run) |
+| Azure | Azure Container Apps | [Container Apps](https://azure.microsoft.com/en-us/products/container-apps) |
 
 You give it your Docker image. It runs it. Auto-scales on traffic. You pay only when requests come in.
 
@@ -162,11 +162,11 @@ Kubernetes is a container orchestration platform. Big words. Simple idea.
 
 You tell Kubernetes — "run 10 copies of my AI agent, restart them if they crash, scale up if traffic increases." Kubernetes handles it. You don't manually manage containers.
 
-| Cloud | Managed Kubernetes |
-|---|---|
-| AWS | EKS (Elastic Kubernetes Service) |
-| GCP | GKE (Google Kubernetes Engine) |
-| Azure | AKS (Azure Kubernetes Service) |
+| Cloud | Managed Kubernetes | Docs |
+|---|---|---|
+| AWS | EKS (Elastic Kubernetes Service) | [AWS EKS](https://aws.amazon.com/eks/) |
+| GCP | GKE (Google Kubernetes Engine) | [GKE](https://cloud.google.com/kubernetes-engine) |
+| Azure | AKS (Azure Kubernetes Service) | [AKS](https://azure.microsoft.com/en-us/products/kubernetes-service) |
 
 All three are managed — meaning the cloud handles the Kubernetes control plane. You manage your workloads, not the infrastructure underneath.
 
